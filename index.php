@@ -7,12 +7,19 @@
 </head>
 <body>
 <?php 
-if ($_GET['name'])
+$name = $_GET['name'];
+if ($name)
 {
+	if (preg_match("/me/", $name))
+	{
+		?>You punched yourself in the throat, numb-nuts!
+		<?
+	} else {
 	?><p><? echo $_GET['name']?> needs to be punched in the throat.</p>
 
 <p>Did you think that was awesome?  Well, you're a dick.  Punch someone else in the throat.</p>
-<? }
+<? } 
+}
 else {
 ?><p>YOU need to be punched in the throat.  Provide a name, asshole!</p>
 <? }
