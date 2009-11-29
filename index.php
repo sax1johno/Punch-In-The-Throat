@@ -10,7 +10,7 @@
 $name = $_GET['name'];
 if ($name)
 {
-	if (preg_match("/me/", $name))
+	if (preg_match("/^me$/", $name))
 	{
 		?>You punched yourself in the throat, numb-nuts!
 		<?
